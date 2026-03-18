@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>izaWear — интернет-магазин</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container nav">
+      <a href="#" class="logo">izaWear</a>
+      <nav class="menu">
+        <a href="#home">Главная</a>
+        <a href="#catalog">Каталог</a>
+        <a href="#about">О бренде</a>
+        <a href="#contacts">Контакты</a>
+      </nav>
+      <button class="cart-btn" id="cartButton">Корзина <span id="cartCount">0</span></button>
+    </div>
+  </header>
+
+  <main> <section class="simple-banner">
+  <div class="banner-content">
+    <h1>izaWear</h1>
+    <p>Minimal. Bold. Style.</p>
+  </div>
+</section>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <p class="eyebrow">Новая коллекция</p>
+          <h1>Your style. Your rules. izaWear.</h1>
+          <p class="hero-subtitle">
+            Современный магазин одежды в минималистичном стиле.
+            Чистый дизайн, удобный каталог и уже рабочая корзина.
+          </p>
+          <div class="hero-actions">
+            <a href="#catalog" class="btn btn-dark">Смотреть каталог</a>
+            <a href="#cartSection" class="btn btn-light">Открыть корзину</a>
+          </div>
+        </div>
+        <div class="hero-card">
+  <div class="mock-product big-card">
+    <div class="tag">new</div>
+    <img class="product-img hero-product-img" src="https://n.cdn.cdek.shopping/images/shopping/FdbayCfF4hkkD5uu.jpg?v=1" alt="Black Hoodie">
+    <h3>Black Hoodie</h3>
+    <p>Базовый oversized худи для повседневного стиля</p>
+    <strong>$45</strong>
+  </div>
+</div>
+      </div>
+    </section>
+
+    <section class="section" id="catalog">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Каталог</p>
+            <h2>Популярные товары</h2>
+          </div>
+          <p class="section-note">Добавляй товары — они появятся ниже в корзине</p>
+        </div>
+
+        <div class="products">
+          <article class="product-card">
+  <img class="product-img" src="https://n.cdn.cdek.shopping/images/shopping/FdbayCfF4hkkD5uu.jpg?v=1" alt="Black Hoodie">
+  <h3>Black Hoodie</h3>
+            <p>Удобный худи в черном цвете</p>
+            <div class="product-bottom">
+              <strong>$45</strong>
+              <button class="add-to-cart" data-name="Black Hoodie" data-price="45">В корзину</button>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <img class="product-img" src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab" alt="Black Hoodie">
+            <h3>White T-Shirt</h3>
+            <p>Минималистичная футболка на каждый день</p>
+            <div class="product-bottom">
+              <strong>$25</strong>
+              <button class="add-to-cart" data-name="White T-Shirt" data-price="25">В корзину</button>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <img class="product-img" src="https://n.cdn.cdek.shopping/images/shopping/QpHehNyqJ1tVlFOP.jpg?v=1" alt="Black Hoodie">
+            <h3>Beige Jacket</h3>
+            <p>Легкая куртка в нейтральном оттенке</p>
+            <div class="product-bottom">
+              <strong>$70</strong>
+              <button class="add-to-cart" data-name="Beige Jacket" data-price="70">В корзину</button>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <img class="product-img" src="https://ir.ozone.ru/s3/multimedia-1-r/7433550855.jpg" alt="Black Hoodie">s
+            <h3>Classic Cap</h3>
+            <p>Базовая кепка в стиле streetwear</p>
+            <div class="product-bottom">
+              <strong>$18</strong>
+              <button class="add-to-cart" data-name="Classic Cap" data-price="18">В корзину</button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section cart-section" id="cartSection">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Корзина</p>
+            <h2>Твои товары</h2>
+          </div>
+        </div>
+          
+        <div class="cart-layout">
+          <div class="cart-card">
+            <div id="cartItems" class="cart-items">
+              <p class="empty-cart">Корзина пока пустая</p>
+            </div>
+          </div>
+
+          <aside class="summary-card">
+            <h3>Итого</h3>
+            <div class="summary-row">
+              <span>Товаров:</span>
+              <strong id="summaryCount">0</strong>
+            </div>
+            <div class="summary-row">
+              <span>Сумма:</span>
+              <strong id="summaryPrice">$0</strong>
+            </div>
+            <button class="checkout-btn" id="checkoutButton">Оформить заказ</button>
+          </aside>
+        </div>
+      </div>
+    </section>
+    <section class="section" id="checkoutSection">
+  <div class="container">
+    <h2>Оформление заказа</h2>
+
+    <div class="checkout-form">
+      <input type="text" id="name" placeholder="Ваше имя">
+      <input type="text" id="phone" placeholder="Телефон">
+      <input type="text" id="address" placeholder="Адрес доставки">
+
+      <button id="submitOrder">Подтвердить заказ</button>
+    </div>
+  </div>
+</section>
+    <section class="section about" id="about">
+      <div class="container about-grid">
+        <div>
+          <p class="eyebrow">О бренде</p>
+          <h2>izaWear — это стиль без лишнего шума</h2>
+        </div>
+        <p>
+          Мы делаем современную одежду в минималистичном стиле.
+          Этот демо-сайт собран на HTML, CSS и JavaScript — это уже
+          правильная база для настоящего интернет-магазина.
+        </p>
+      </div>
+    </section>
+
+    <section class="section contacts" id="contacts">
+      <div class="container">
+        <p class="eyebrow">Контакты</p>
+        <h2>Связь с izaWear</h2>
+        <div class="contact-box">
+          <p>Email: hello@izawear.com</p>
+          <p>Instagram: @izawear</p>
+          <p>Telegram: @izawear_shop</p>
+        </div>
+      </div>
+    </section>
+  </main> 
+
+  <div class="toast" id="toast">Товар добавлен в корзину</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
