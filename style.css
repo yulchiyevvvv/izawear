@@ -484,7 +484,9 @@ body {
   margin-bottom: 12px;
 }
 .product-card {
-  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .product-img {
